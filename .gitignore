@@ -416,3 +416,18 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Archivos de configuracion intellij
+.idea/
+*.iws
+*.iml
+*.ipr
+
+#Archivos de construccion
+target/
+build/
+out/
+
+#Configuracion local de base de datos
+.h2.db
+.trace.db
