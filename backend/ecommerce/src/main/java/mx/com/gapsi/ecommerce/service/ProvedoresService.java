@@ -1,7 +1,7 @@
 //Patron de diseno service layer
 package mx.com.gapsi.ecommerce.service;
 
-import mx.com.gapsi.ecommerce.exception.ProvedorIncompletoException;
+import mx.com.gapsi.ecommerce.exception.GlobalException;
 import mx.com.gapsi.ecommerce.model.Provedores;
 import mx.com.gapsi.ecommerce.repository.ProvedoresRepository;
 import org.springframework.stereotype.Service;
@@ -21,14 +21,13 @@ public class ProvedoresService {
     }
 
     public Provedores createProvider(Provedores provedores) {
-        if (provedores.getNombre() == null || provedores.getDireccion() == null || provedores.getRazonSocial() == null) {
-            throw new ProvedorIncompletoException();
-        }
-
         if (provedoresRepository.existsByNombre(provedores.getNombre())) {
-            throw new ProvedorIncompletoException();
+            throw new GlobalException("El provedor ya esta registrado.");
         }
-
+        
+        if (provedores.getNombre() == null || provedores.getDireccion() == null || provedores.getRazonSocial() == null) {
+            throw new GlobalException("Faltan datos de provedor, favor de llenar y reintentar");
+        }
         return provedoresRepository.save(provedores);
     }
 }

@@ -1,9 +1,7 @@
 package mx.com.gapsi.ecommerce.controller;
 
-import mx.com.gapsi.ecommerce.exception.ProvedorIncompletoException;
 import mx.com.gapsi.ecommerce.model.Provedores;
 import mx.com.gapsi.ecommerce.service.ProvedoresService;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
