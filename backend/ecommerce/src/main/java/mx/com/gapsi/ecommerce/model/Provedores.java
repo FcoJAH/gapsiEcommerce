@@ -1,10 +1,10 @@
 package mx.com.gapsi.ecommerce.model;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
@@ -18,13 +18,19 @@ public class Provedores {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "El nombre es obligatorio.")
     private String nombre;
+    @NotBlank(message = "La razón es obligatorio.")
     private String razonSocial;
     private String detalles;
+    @NotBlank(message = "La direccion es obligatorio.")
     private String direccion;
+    @NotNull(message = "El contacto es obligatorio.")
+    private Long contacto;
+    @NotNull(message = "El saldo es obligatorio.")
+    private float saldo;
     private int activo;
     private LocalDateTime createdAt;
-    private String createdBy;
 
     @PrePersist
     protected void onCreate() {

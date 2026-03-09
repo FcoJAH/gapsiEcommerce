@@ -1,0 +1,145 @@
+{
+  "info": {
+    "_postman_id": "86ca310b-2e55-46d7-923b-30eb6dd89e03",
+    "name": "gapsiEcommerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39106732"
+  },
+  "item": [
+    {
+      "name": "ObtenerListaProveedores",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/provedores/all",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "provedores",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CrearProvedor",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Francisco\",\r\n    \"razonSocial\": \"Ferreteria San Miguel S.A. de C.V.\",\r\n    \"detalles\": \"Surtidora de tornilleria y herramientas\",\r\n    \"direccion\": \"Valle de la cañada 1576, Guadalajara, Jalisco\",\r\n    \"contacto\": \"3333333333\",\r\n    \"saldo\": 1200.50\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/provedores/create",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "provedores",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ActualizarEstadoProvedor",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/provedores/1/status/5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "provedores",
+            "1",
+            "status",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Bienvenida",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Francisco\",\r\n    \"razonSocial\": \"Ferreteria San Miguel S.A. de C.V.\",\r\n    \"detalles\": \"Surtidora de tornilleria y herramientas\",\r\n    \"direccion\": \"Valle de la cañada 1576, Guadalajara, Jalisco\",\r\n    \"contacto\": \"3333333333\",\r\n    \"saldo\": 1200.50\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/system/welcome",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "system",
+            "welcome"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Version",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Francisco\",\r\n    \"razonSocial\": \"Ferreteria San Miguel S.A. de C.V.\",\r\n    \"detalles\": \"Surtidora de tornilleria y herramientas\",\r\n    \"direccion\": \"Valle de la cañada 1576, Guadalajara, Jalisco\",\r\n    \"contacto\": \"3333333333\",\r\n    \"saldo\": 1200.50\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/system/version",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "system",
+            "version"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

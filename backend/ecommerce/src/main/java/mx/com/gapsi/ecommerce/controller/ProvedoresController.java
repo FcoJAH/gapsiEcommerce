@@ -1,5 +1,6 @@
 package mx.com.gapsi.ecommerce.controller;
 
+import jakarta.validation.Valid;
 import mx.com.gapsi.ecommerce.model.Provedores;
 import mx.com.gapsi.ecommerce.service.ProvedoresService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/provedores")
 public class ProvedoresController {
@@ -25,8 +27,9 @@ public class ProvedoresController {
     }
 
     @PostMapping("/create")
-    public Provedores createProvider(@RequestBody Provedores provedores) {
-        return provedoresService.createProvider(provedores);
+    public ResponseEntity<?> createProvider(@Valid @RequestBody Provedores provedores) {
+        Provedores nuevo = provedoresService.createProvider(provedores);
+        return ResponseEntity.ok(nuevo);
     }
 
     @PutMapping("/{id}/status/{status}")
