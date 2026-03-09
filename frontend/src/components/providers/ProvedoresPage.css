@@ -1,0 +1,10 @@
+.providers-container {
+    background-color: #fbfcfe;
+    display: block;
+    position: relative;
+}
+
+.providers-card {
+    background-color: white;
+    margin: 20px;
+}

@@ -25,10 +25,6 @@ public class ProvedoresService {
         if (provedoresRepository.existsByNombre(provedores.getNombre())) {
             throw new GlobalException("El provedor ya esta registrado.", HttpStatus.BAD_REQUEST);
         }
-
-        if (provedores.getNombre() == null || provedores.getDireccion() == null || provedores.getRazonSocial() == null) {
-            throw new GlobalException("Faltan datos de provedor, favor de llenar y reintentar",HttpStatus.BAD_REQUEST);
-        }
         return provedoresRepository.save(provedores);
     }
 

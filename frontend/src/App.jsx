@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import WelcomePage from './components/WelcomePage'
+import WelcomePage from './components/welcome/WelcomePage'
+import ProvedoresPage from './components/providers/ProvedoresPage'
 import './App.css'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
+        <Route path="/provedores" element={<ProvedoresPage/>} />
       </Routes>
     </Router>
   )
