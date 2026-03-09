@@ -1,0 +1,7 @@
+mx\com\gapsi\ecommerce\repository\ProvedoresRepository.class
+mx\com\gapsi\ecommerce\EcommerceApplication.class
+mx\com\gapsi\ecommerce\model\Provedores.class
+mx\com\gapsi\ecommerce\exception\GlobalException.class
+mx\com\gapsi\ecommerce\exception\GlobalExceptionHandler.class
+mx\com\gapsi\ecommerce\controller\ProvedoresController.class
+mx\com\gapsi\ecommerce\service\ProvedoresService.class
