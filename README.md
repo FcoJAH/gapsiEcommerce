@@ -17,12 +17,12 @@ Para ejecutar este proyecto, asegúrate de tener instalado:
 ### 1. Clonar el repositorio
 ```bash
 git clone https://github.com/FcoJAH/gapsiEcommerce.git
-cd nombre-del-proyecto
+cd gapsiEcommerce
 ```
 
 ### 2. Configurar y ejecutar el Backend
 ```bash
-cd backend
+cd backend/ecommerce
 mvn clean install
 mvn spring-boot:run
 ```
