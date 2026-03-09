@@ -36,6 +36,11 @@ npm run dev
 ```
 **App disponible en: http://localhost:5173**
 
+## Documentación de la API
+Los endpoints del proyecto están documentados en Postman. Puedes importar la colección para probar el servicio:
+
+* **Archivo:** `docs/gapsiEcommerce.postman_collection`
+* **Ambiente recomendado:** `http://localhost:8080/api`
 
 ## Arquitectura de la Solución
 La aplicación comunica un frontend React con un backend Spring Boot mediante una API REST.
@@ -44,3 +49,4 @@ La aplicación comunica un frontend React con un backend Spring Boot mediante un
 * **Frontend: React, Material UI, Axios.**
 * **Backend: Spring Boot, Spring Data JPA, Hibernate, Validation.**
 * **Base de Datos: H2 en memoria.**
+
