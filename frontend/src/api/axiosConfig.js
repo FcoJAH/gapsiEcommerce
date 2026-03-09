@@ -7,4 +7,8 @@ const api = axios.create({
     },
 });
 
+axios.defaults.validateStatus = (status) => {
+    return status >= 200 && status < 300; 
+};
+
 export default api;

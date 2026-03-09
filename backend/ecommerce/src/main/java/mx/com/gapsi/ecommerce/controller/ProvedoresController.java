@@ -27,8 +27,9 @@ public class ProvedoresController {
     }
 
     @PostMapping("/create")
-    public Provedores createProvider(@Valid @RequestBody Provedores provedores) {
-        return provedoresService.createProvider(provedores);
+    public ResponseEntity<?> createProvider(@Valid @RequestBody Provedores provedores) {
+        Provedores nuevo = provedoresService.createProvider(provedores);
+        return ResponseEntity.ok(nuevo);
     }
 
     @PutMapping("/{id}/status/{status}")
