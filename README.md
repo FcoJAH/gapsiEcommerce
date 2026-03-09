@@ -20,6 +20,8 @@ git clone https://github.com/FcoJAH/gapsiEcommerce.git
 cd gapsiEcommerce
 ```
 
+**Importante cambiar a la rama "develop"**
+
 ### 2. Configurar y ejecutar el Backend
 ```bash
 cd backend/ecommerce
